@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="Cerebro.js"></script>
+    <link rel="stylesheet" href="Piel.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onLoad=initClock()>
+    <div id="date">
+        <p>
+            <span id="date-h">00</span>
+            :
+            <span id="date-m">00</span>
+            :
+            <span id="date-s">00</span>
+        </p>
+    </div>
+    <div id="mm">
+        <span>
+            <div class="checkbox-wrapper-8">
+                <input class="tgl tgl-skewed" id="cb3-8" onclick="veWatch()" type="checkbox" />
+                <label class="tgl-btn" data-tg-off="Chrono" data-tg-on="Timer" for="cb3-8"></label>
+            </div>
+        </span>
+    </div>
+    <div id="cronometro">
+        <p id="cronoTime">
+            <span id="crono-h">00</span>
+            :
+            <span id="crono-m">00</span>
+            :
+            <span id="crono-s">00</span>
+        </p>
+        <button onclick="Reset('Chrono')">Reset</button>
+        <button id="StatusChrono" onclick="StatusChrono()">Start</button>
+        <div id="time-lap">
+            <button onclick="Timelap()">Time Lap</button>
+            <p>Time Lap</p>
+            <ul id="lista-time-lap">
+
+            </ul>
+        </div>
+    </div>
+    <div id="temporizador">
+        <p>
+            <span id="temp-h">00</span>
+            :
+            <span id="temp-m">00</span>
+            :
+            <span id="temp-s">00</span>
+        </p>
+        <div class="botones">
+            <button onclick="CalcTimer(3600000, 'suma')">+</button>
+            <button onclick="CalcTimer(3600000, 'resta')">-</button>
+            :
+            <button onclick="CalcTimer(60000,'suma')">+</button>
+            <button onclick="CalcTimer(60000,'resta')">-</button>
+            :
+            <button onclick="CalcTimer(1000,'suma')">+</button>
+            <button onclick="CalcTimer(1000,'resta')">-</button>
+        </div>
+        <div>
+            <button onclick="Reset('Timer')">Reset</button>
+            <button id="StatusTimer" onclick="StatusTimer()">Start</button>
+        </div>
+    </div>
+</body>
+
+</html>
